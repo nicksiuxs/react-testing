@@ -2,12 +2,14 @@ import { render, screen } from '@testing-library/react';
 
 import Header from '../Header';
 
-it('Should render same text passed into title prop getByTex', async () => {
-    render(<Header title="My header" />);
-    const headingElement = screen.getByText(/MY header/i);
+describe("Header component", () => {
+    it('Should render same text passed into title prop getByTex', async () => {
+        render(<Header title="My header" />);
+        const headingElement = screen.getByText(/MY header/i);
 
-    expect(headingElement).toBeInTheDocument();
-});
+        expect(headingElement).toBeInTheDocument();
+    });
+})
 
 // it('Should render same text passed into title prop getByTitle', async () => {
 //     render(<Header title="My header" />);
